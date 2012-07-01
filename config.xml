@@ -1,0 +1,13 @@
+<configuration>
+	<!-- Your SMTP account information -->
+	<username>prophitt.corey@gmail.com</username>
+	<password>password</password>
+	<host>smtp.gmail.com</host>
+	
+	<!-- Recipients is a CSV file. Each address ends with a comma and a new line. -->
+	<recipients> ../../recipients.txt </recipients>
+	<subject>Some subject</subject>
+	<body>Put some body message here. </body>
+</configuration>
+
+<!-- Don't Be Evil -->
