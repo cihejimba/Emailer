@@ -28,12 +28,12 @@ namespace Emailer
             XmlDocument config = new XmlDocument();
             try
             {
-	            config.Load("../../config.xml");
+                config.Load("../../config.xml");
             }
             catch(Exception ex) 
             {
-	            Console.WriteLine("ERROR: Exception while reading configuration file.", Color.Red);
-	            Console.WriteLine(ex.Message, Color.Red);
+                Console.WriteLine("ERROR: Exception while reading configuration file.", Color.Red);
+                Console.WriteLine(ex.Message, Color.Red);
             }
 
             var root = config.FirstChild;
@@ -51,16 +51,16 @@ namespace Emailer
             var emails = new CsvReader(recipients).Read();
             if (emails != null)
             {
-	            Console.WriteLine(string.Format("INFO: Attempting to send {0} emails.", emails.Count), Color.Cyan);
+                Console.WriteLine(string.Format("INFO: Attempting to send {0} emails.", emails.Count), Color.Cyan);
 
-	            // Email all recipients a copy of the message
-	            var massMailer = new MassMailer(username, subject, body, host, password);
-	            massMailer.Add(emails);
-	            massMailer.Send();
+                // Email all recipients a copy of the message
+                var massMailer = new MassMailer(username, subject, body, host, password);
+                massMailer.Add(emails);
+                massMailer.Send();
             }
             else
             {
-	            Console.WriteLine("ERROR: No emails extracted.", Color.Red);
+                Console.WriteLine("ERROR: No emails extracted.", Color.Red);
             }
 
             Console.WriteLine("Finished! Press enter to quit.", Color.Cyan);
