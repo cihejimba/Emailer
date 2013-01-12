@@ -43,18 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Console.cs" />
-    <Compile Include="CsvReader.cs" />
-    <Compile Include="FileReader.cs" />
-    <Compile Include="MassMailer.cs" />
-    <Compile Include="SmtpMailer.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Console.cs" />
+    <Compile Include="Source\CsvReader.cs" />
+    <Compile Include="Source\FileReader.cs" />
+    <Compile Include="Source\MassMailer.cs" />
+    <Compile Include="Source\SmtpMailer.cs" />
+    <Compile Include="Source\Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.xml">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
