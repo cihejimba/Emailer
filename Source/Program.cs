@@ -19,9 +19,12 @@ namespace Emailer
     class Program
     {
 
+        //
+        // Note: Next time just use an app.config :) 
+        //
         static void Main(string[] args)
         {
-            // Parse the config file
+            // Parse the config file 
             XmlDocument config = new XmlDocument();
             try
             {
