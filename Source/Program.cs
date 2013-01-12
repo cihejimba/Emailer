@@ -62,7 +62,7 @@ namespace Emailer
 
             Console.WriteLine("Finished! Press enter to quit.", Color.Cyan);
             System.Console.ReadLine();
-            }
+        } // end Main
 
     } // end class Program
 } // end namespace
