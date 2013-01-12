@@ -6,22 +6,31 @@
 // Copyright: See the readme.
 //
 
+#region Using Statements
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
+#endregion
 
 namespace Emailer
 {
 	class MassMailer
-	{
-		private readonly string _password;
+    {
+
+        #region Member Variables
+
+        private readonly string _password;
 
 		private List<string> mailList = new List<string>();
 		private readonly SmtpMailer mailer = new SmtpMailer();
 
-		public MassMailer(string from, string subject, 
+        #endregion
+
+        #region Creation & Destruction
+
+        public MassMailer(string from, string subject, 
 											string body, string host, 
 											string password, int port = 587)
 		{
@@ -33,7 +42,11 @@ namespace Emailer
 			mailer.port = port;
 		}
 
-		public void Add( List<string> mailList )
+        #endregion
+
+        #region Methods
+
+        public void Add( List<string> mailList )
 		{
 			this.mailList = mailList;
 		}
@@ -58,6 +71,9 @@ namespace Emailer
 				mailer.to = address;
 				mailer.Send(_password);	
 			}
-		}
-	}
-}
+        }
+
+        #endregion
+
+    } // end class MassMailer
+} // end namespace

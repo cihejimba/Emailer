@@ -6,16 +6,19 @@
 // Copyright: See the readme.
 //
 
+#region Using Statements
 
 using System;
 using System.Linq;
 using System.Xml;
 
+#endregion
 
 namespace Emailer
 {
 	class Program
 	{
+
 		static void Main(string[] args)
 		{
 			// Parse the config file
@@ -60,5 +63,6 @@ namespace Emailer
 			Console.WriteLine("Finished! Press enter to quit.", Color.Cyan);
 			System.Console.ReadLine();
 		}
-	}
-}
+
+	} // end class Program
+} // end namespace
