@@ -6,20 +6,29 @@
 // Copyright: See the readme.
 //
 
+#region Using Statements
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
+#endregion
 
 namespace Emailer
 {
 	class FileReader
-	{
-		private readonly string _filename;
+    {
 
-		public FileReader()
+        #region Member Variables
+
+        private readonly string _filename;
+
+        #endregion
+
+        #region Creation & Destruction
+
+        public FileReader()
 		{
 			
 		}
@@ -29,7 +38,11 @@ namespace Emailer
 			_filename = filename;
 		}
 
-		public List<string> Read()
+        #endregion
+
+        #region Methods
+
+        public List<string> Read()
 		{
 			if (_filename == null || _filename == string.Empty)
 			{
@@ -61,7 +74,9 @@ namespace Emailer
 				Console.WriteLine(e.Message, Color.Red);
 			}
 			return stringList;
-		}
+        }
 
-	}
-}
+        #endregion
+
+    } // end class FileReader
+} // end namespace

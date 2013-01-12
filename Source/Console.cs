@@ -6,10 +6,12 @@
 // Copyright: See the readme.
 //
 
+#region Using Statements
 
 using System;
 using System.Linq;
 
+#endregion
 
 namespace Emailer
 {
@@ -22,14 +24,24 @@ namespace Emailer
 		White,
 	}
 
+    //
+    // This name clashes with System Console, bad idea :(
+    //
 	class Console
-	{
-		public Console()
+    {
+
+        #region Creation & Destruction
+
+        public Console()
 		{
 			
 		}
 
-		public static void WriteLine(string message, Color color)
+        #endregion
+
+        #region Methods
+
+        public static void WriteLine(string message, Color color)
 		{
 			switch (color)
 			{
@@ -52,6 +64,9 @@ namespace Emailer
 
 			System.Console.WriteLine(message);
 			System.Console.ResetColor();
-		}
-	}
-}
+        }
+
+        #endregion
+
+    } // end class Console
+} // end namespace 

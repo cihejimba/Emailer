@@ -6,28 +6,36 @@
 // Copyright: See the readme.
 //
 
+#region Using Statements
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
+#endregion
 
 namespace Emailer
 {
 	//
-	// This is quite the naive parser..  
+	// This is quite the naive and incomplete parser..  
 	//
 
 	class CsvReader : FileReader
-	{
+    {
 
-		public CsvReader( string filename ) 
+        #region Creation & Destruction
+
+        public CsvReader( string filename ) 
 			: base(filename) 
 		{
 			
 		}
 
-		new public List<string> Read()
+        #endregion
+
+        #region Methods
+
+        new public List<string> Read()
 		{
 			List<string> stringList = base.Read();
 			List<string> commalessList = new List<string>();
@@ -40,6 +48,9 @@ namespace Emailer
 			}
 
 			return commalessList;
-		}
-	}
-}
+        }
+
+        #endregion
+
+    } // end clas CsvReader
+} // end namespace
